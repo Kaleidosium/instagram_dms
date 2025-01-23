@@ -12,7 +12,7 @@ This was primarily written for Windows, though I don't see why it shouldn't work
 
 ### Requirements
 
-- Make sure you have [Rye](https://rye.astral.sh/) installed on your computer.
+- Make sure you have [uv](https://docs.astral.sh/uv/) installed on your computer.
 
 ### Installation Steps
 
