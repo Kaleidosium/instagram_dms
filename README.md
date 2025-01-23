@@ -34,7 +34,7 @@ This was primarily written for Windows, though I don't see why it shouldn't work
 3. Start the program with:
 
    ```bash
-   uv run --no-project src/instagram_dms.py
+   uv run src/instagram_dms.py
    ```
 
 ### Creating a Standalone Executable (Optional)
