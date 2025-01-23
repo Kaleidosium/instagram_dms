@@ -28,13 +28,13 @@ This was primarily written for Windows, though I don't see why it shouldn't work
 2. Open a terminal/command prompt in the project folder and run:
 
    ```bash
-   rye sync
+   uv sync
    ```
 
 3. Start the program with:
 
    ```bash
-   rye run python src/instagram_dms.py
+   uv run --no-project src/instagram_dms.py
    ```
 
 ### Creating a Standalone Executable (Optional)
