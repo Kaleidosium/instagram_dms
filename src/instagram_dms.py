@@ -58,22 +58,7 @@ class InstagramDMClient:
                     return !!sessionId && !!sessionKey;  // True only if both cookie and local storage are valid.
                 }
 
-                function handleInitialSetup() {
-                    // Only run when not logged in
-                    if (isLoggedIn()) {
-                        return;
-                    }
-                    
-                    // Handle "Not Now" on Notifications Modal
-                    const buttons = Array.from(document.querySelectorAll('button'));
-                    const notNowButton = buttons.find(button => button.textContent === 'Not Now');
-                    if (notNowButton) {
-                        console.log('Found Not Now button, clicking...');
-                        notNowButton.click();
-                    }
-                }
-
-                // One-time style application
+                // Custom Style Application
                 function applyCustomStyles() {
                     try {
                         const htmlElement = document.querySelector('html');
@@ -102,14 +87,11 @@ class InstagramDMClient:
                     }
                 }
 
-                // Initial setup
-                handleInitialSetup();
+                // Apply custom styles on load
                 applyCustomStyles();
 
-                // NOTE(dania): Leaving this commented out code in case if it's ever needed, but it's unlikely
-                /*
                 const observer = new MutationObserver(() => {
-                    applyCustomStyles();  // Only reapply styles on DOM mutations
+                    applyCustomStyles();  // Reapply styles on DOM mutations only
                 });
 
                 observer.observe(document.body, {
@@ -120,7 +102,6 @@ class InstagramDMClient:
                 window.addEventListener('beforeunload', () => {
                     observer.disconnect();  // Disconnect the observer when the window unloads
                 });
-                */
 
                 // Handle external and non-allowed links (Open them in the Browser as a new tab)
                 window.addEventListener('click', function (e) {
