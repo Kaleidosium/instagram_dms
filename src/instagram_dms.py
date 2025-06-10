@@ -40,7 +40,7 @@ class InstagramDMClient:
                 const DM_URL = 'https://www.instagram.com/direct/inbox/';
 
                 function isAllowedUrl(url) {
-                    // Allow all external links but restrict Instagram navigation to DMs and Authentication
+                    // Allow all external links and restrict Instagram navigation to DMs and Authentication
                     const isDMSection = url.startsWith('https://www.instagram.com/direct');
                     const isLoginPage = url.startsWith('https://www.instagram.com/accounts/login');
                     const isChallengePage = url.startsWith('https://www.instagram.com/challenge');
@@ -103,7 +103,7 @@ class InstagramDMClient:
                     observer.disconnect();  // Disconnect the observer when the window unloads
                 });
 
-                // Handle external and non-allowed links (Open them in the Browser as a new tab)
+                // Handle external links and non-allowed navigation (Open them in the Browser as a new tab)
                 window.addEventListener('click', function (e) {
                     const anchorTag = e.target.tagName === 'A' ? e.target : e.target.closest('a');
                     if (anchorTag) {
