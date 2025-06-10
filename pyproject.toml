@@ -6,7 +6,7 @@ authors = [
     { name = "Dania Rifki", email = "atomicnumberphi@gmail.com" }
 ]
 dependencies = [
-    "pywebview>=5.3",
+    "pywebview>=5.4",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -14,5 +14,5 @@ requires-python = ">= 3.10"
 [tool.uv]
 managed = true
 dev-dependencies = [
-    "pyinstaller>=6.11",
+    "pyinstaller>=6.14.1",
 ]
