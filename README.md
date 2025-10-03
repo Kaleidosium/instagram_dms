@@ -43,7 +43,7 @@ To create an executable file you can double-click to run:
 
 ```bash
 # Windows, you might have to adjust for macOS/Linux
-pyinstaller --onefile --windowed --icon=res/icon.ico src/instagram_dms.py
+uv run pyinstaller --onefile --windowed --icon=res/icon.ico src/instagram_dms.py
 ```
 
 The executable will be created in the `dist` folder.
