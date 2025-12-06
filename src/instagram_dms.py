@@ -140,7 +140,9 @@ class InstagramDMClient:
 
         self.window.events.loaded += self._on_loaded
 
-        webview.start(private_mode=False, http_server=True, http_port=13377, debug=False)
+        webview.start(
+            private_mode=False, http_server=True, http_port=13377, debug=False
+        )
 
 
 if __name__ == "__main__":
